@@ -11,8 +11,8 @@ SETUP AND WORKFLOW
 
 # Initial setup (first run only)
 
-sudo easy_install pip   # If you don't have pip already
-pip install virtualenvwrapper   # If you don't have virtualenv already
+sudo easy_install pip   // If you don't have pip already
+pip install virtualenvwrapper   // If you don't have virtualenv already
 mkvirtualenv dj-calsimple
 workon dj-calsimple
 cdvirtualenv
@@ -25,26 +25,26 @@ We put all of our own apps in the "apps" directory, so it needs to be on the vir
     pwd [copy]
     add2virtualenv [paste]
 
-# You'll need a local_settings.py containing the settings specific
-# to your machine. Get a starter version at:
+You'll need a local_settings.py containing the settings specific
+to your machine. Get a starter version at:
 https://github.com/shacker/djcc/wiki/Sample-local_settings.py
-# Edit that file to match your setup (see below on database options).
+Edit that file to match your setup (see below on database options).
 
 Now:
 cp dj-calsimple/manage.py .
 
-# You can either start with an empty dataset, or use provided sample data.
-# Scot can provide sample data (request from shacker@berkeley.edu).
-# Place the sample data in dj-calsimple/dj-calsimple/data/all.json, then create initial tables with:
+You can either start with an empty dataset, or use provided sample data.
+Scot can provide sample data (request from shacker@berkeley.edu).
+Place the sample data in dj-calsimple/dj-calsimple/data/all.json, then create initial tables with:
 
 python manage.py syncdb
 
-# Create a superuser login for yourself if you know there's not going to be one
-# in the sample data you'll be loading:
+Create a superuser login for yourself if you know there's not going to be one
+in the sample data you'll be loading:
 
 python manage.py createsuperuser
 
-# Now load up the sample data:
+Now load up the sample data:
 python manage.py loaddata dj-calsimple/data/all.json
 
 # Daily workflow:
@@ -61,9 +61,10 @@ git ignore:
     *.pyc
 
 
-
-=====================
+====================
 MISC NOTES...
+====================
+
 
 Unlike OAE, the Django console should be run in the foreground, not background - it refreshes itself in seconds, and output is always visible.
 
@@ -80,13 +81,13 @@ Note: Django has its own "staff" status which just means a user has basic access
 
 To generate a graphical display of the models relationship:
 
-# Create a dot file
+Create a dot file
 $ python manage.py graph_models -a > my_project.dot
 
-# Create a PNG image file called my_project_visualized.png with application grouping
+Create a PNG image file called my_project_visualized.png with application grouping
 $ python manage.py graph_models -a -g -o my_project_visualized.png
 
-# Create a dot file for only the 'foo' and 'bar' applications of your project
+Create a dot file for only the 'foo' and 'bar' applications of your project
 $ python manage.py graph_models foo bar > my_project.dot
 
 Install Graphviz for Mac to view .dot files
