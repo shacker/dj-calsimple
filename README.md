@@ -5,10 +5,6 @@ Simple PoC for Django-backed CalCentral "mashup" project
 Currently includes a number of additional apps that will neeed to be trimmed
 out (but that won't affect your experiments)
 
-====================
-SETUP AND WORKFLOW
-====================
-
 # Initial setup (first run only)
 
 sudo easy_install pip   // If you don't have pip already
@@ -18,7 +14,6 @@ workon dj-calsimple
 cdvirtualenv
 git clone https://github.com/shacker/dj-calsimple.git
 pip install -r requirements.txt
-
 
 We put all of our own apps in the "apps" directory, so it needs to be on the virtualenv import path.
     cd path/to/apps
@@ -61,10 +56,7 @@ git ignore:
     *.pyc
 
 
-====================
-MISC NOTES...
-====================
-
+# Misc notes
 
 Unlike OAE, the Django console should be run in the foreground, not background - it refreshes itself in seconds, and output is always visible.
 
@@ -76,8 +68,6 @@ In the admin, create groups: students, staff, instructors
 Load sample data by running create_users.py
 
 Note: Django has its own "staff" status which just means a user has basic access to the admin. NOT that they can see anything in the admin you haven't OK'd. Not to be confused with them being staff of UCB.
-
-====
 
 To generate a graphical display of the models relationship:
 
@@ -92,7 +82,6 @@ $ python manage.py graph_models foo bar > my_project.dot
 
 Install Graphviz for Mac to view .dot files
 
-====
 
 Some 3rd party template systems (such as jQuery templates) use a template syntax similar to Django's. To prevent these from conflicting, I've installed a templatetag called "verbatim". If you need it, use:
 
@@ -100,8 +89,6 @@ Some 3rd party template systems (such as jQuery templates) use a template syntax
 ...
 {% verbatim %}
 {% endverbatim %}
-
-=====
 
 To start debugging, put this anywhere in your code and reload:
 
@@ -119,6 +106,3 @@ use 'locals()' to see all local variables
 use up + down to see parents and children (unclearl on this)
 use keys 'c' or 'n' to continue or go to next.
 
-=====
-
-See bottom of homepage after logging in for API and "model once" examples.
