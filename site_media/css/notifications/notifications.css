@@ -1,0 +1,14 @@
+/* Notifications */
+
+.cc-widget-notifications-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+.cc-widget-notifications-list li {
+	margin-top: 10px;
+}
+.cc-widget-notifications-summary {
+	padding-left: 30px;
+	width: 270px;
+}

@@ -1,0 +1,1534 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ *
+ * Detailed information about this CSS: h5bp.com/css
+ *
+ * ==|== normalize ==========================================================
+ */
+
+
+/* =============================================================================
+	 HTML5 display definitions
+	 ========================================================================== */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+/* =============================================================================
+	 Base
+	 ========================================================================== */
+
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+body { margin: 0; font-size: 1em; line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+
+::-moz-selection { background: #57C9FA; color: #fff; text-shadow: none; }
+::selection { background: #57C9FA; color: #fff; text-shadow: none; }
+
+
+/* =============================================================================
+	 Links
+	 ========================================================================== */
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers: h5bp.com/h */
+a:hover, a:active { outline: 0; }
+
+
+/* =============================================================================
+	 Typography
+	 ========================================================================== */
+
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+
+blockquote { margin: 1em 40px; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+small { font-size: 85%; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/* =============================================================================
+	 Lists
+	 ========================================================================== */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/* =============================================================================
+	 Embedded content
+	 ========================================================================== */
+
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/i/440
+ */
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+/*
+ * Correct overflow not hidden in IE9
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/* =============================================================================
+	 Figures
+	 ========================================================================== */
+
+figure { margin: 0; }
+
+
+/* =============================================================================
+	 Forms
+	 ========================================================================== */
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+
+/* Indicate that 'label' will shift focus to the associated form element */
+label { cursor: pointer; }
+
+/*
+ * 1. Correct color not inheriting in IE6/7/8/9
+ * 2. Correct alignment displayed oddly in IE6/7
+ */
+
+legend { border: 0; *margin-left: -7px; padding: 0; white-space: normal; }
+
+/*
+ * 1. Correct font-size not inheriting in all browsers
+ * 2. Remove margins in FF3/4 S5 Chrome
+ * 3. Define consistent vertical alignment display in all browsers
+ */
+
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+/*
+ * 1. Define line-height as normal to match FF3/4 (set using !important in the UA stylesheet)
+ */
+
+button, input { line-height: normal; }
+
+/*
+ * 1. Display hand cursor for clickable form elements
+ * 2. Allow styling of clickable form elements in iOS
+ * 3. Correct inner spacing displayed oddly in IE7 (doesn't effect IE6)
+ */
+
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+
+button[disabled], input[disabled] { cursor: default; }
+
+/*
+ * Consistent box sizing and appearance
+ */
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/*
+ * Remove inner padding and border in FF3/4: h5bp.com/l
+ */
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/*
+ * 1. Remove default vertical scrollbar in IE6/7/8/9
+ * 2. Allow only vertical resizing
+ */
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Colors for form validity */
+input:valid, textarea:valid {	}
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+
+/* =============================================================================
+	 Tables
+	 ========================================================================== */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/* =============================================================================
+	 Chrome Frame Prompt
+	 ========================================================================== */
+
+.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
+
+
+/* ==|== primary styles =====================================================
+	 Author:
+	 ========================================================================== */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	background: #F2F2F2;
+	color: #444;
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+a, a:visited, a:active {
+	color: #2683BC;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	color: #2683BC;
+	text-decoration: underline;
+}
+
+body > header {
+	background: url("/static/img/myb/cc_branding_strip.png");
+	border: 1px solid #d3d8d8;
+	border-bottom: none;
+	border-top: none;
+	cursor: pointer;
+	margin: 0 auto;
+	height: 42px;
+	position: relative;
+	width: 960px;
+}
+.cc-page-index header {
+	background: url("/static/img/myb/calcentral_masthead_landing.png");
+	height: 90px;
+}
+body > header > h1 {
+	margin: 0;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+/* Useful classes */
+.cc-alert {
+	color: #FB0007 !important;
+}
+.cc-ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.cc-icon, .cc-icon-big {
+	background: no-repeat;
+}
+.cc-icon {
+	height: 16px;
+	width: 16px;
+}
+.cc-icon-alert {
+	background-image: url('/static/img/myb/icon_alert_16x16.png');
+}
+.cc-icon-arrow-right-brown {
+	background-image: url('/static/img/myb/icon_arrow_right_brown_16x16.png');
+}
+.cc-icon-arrow-right {
+	background-image: url('/static/img/myb/icon_arrow_right_16x16.png');
+}
+.cc-icon-big {
+	height: 24px;
+	width: 24px;
+}
+.cc-icon-big-academics {
+	background-image: url('/static/img/myb/icon_academics_24x24.png');
+}
+.cc-icon-big-alert {
+	background-image: url('/static/img/myb/icon_alert_24x24.png');
+}
+.cc-icon-big-block {
+	background-image: url('/static/img/myb/icon_block_24x24.png');
+}
+.cc-icon-big-classes {
+	background-image: url('/static/img/myb/icon_classes_24x24.png');
+}
+.cc-icon-big-completed {
+	background-image: url('/static/img/myb/icon_completed_24x24.png');
+}
+.cc-icon-big-enrollment {
+	background-image: url('/static/img/myb/icon_enrollment_24x24.png');
+}
+.cc-icon-big-finances {
+	background-image: url('/static/img/myb/icon_finances_24x24.png');
+}
+.cc-icon-big-inprogress {
+	background-image: url('/static/img/myb/icon_inprogress_24x24.png');
+}
+.cc-icon-big-overdue {
+	background-image: url('/static/img/myb/icon_overdue_24x24.png');
+}
+.cc-icon-bspace {
+	background-image: url('/static/img/myb/icon_bspace_16x16.png');
+}
+.cc-icon-calendar {
+	background-image: url('/static/img/myb/icon_calendar_16x16.png');
+}
+.cc-icon-canvas {
+	background-image: url('/static/img/myb/icon_canvas_16x16.png');
+}
+.cc-icon-drive {
+	background-image: url('/static/img/myb/icon_drive_16x16.png');
+}
+.cc-icon-email {
+	background-image: url('/static/img/myb/icon_message_16x16.png');
+}
+.cc-icon-mail {
+	background-image: url('/static/img/myb/icon_mail_16x16.png');
+}
+
+/* 150x150 icons */
+.cc-icon-advising {
+	background-image: url('/static/img/myb/icon_campus_advising_150x150.png');
+}
+.cc-icon-academicplan {
+	background-image: url('/static/img/myb/icon_campus_academicplan_150x150.png');
+}
+.cc-icon-campusdepartments {
+	background-image: url('/static/img/myb/icon_campus_campusdepartments_150x150.png');
+}
+.cc-icon-career {
+	background-image: url('/static/img/myb/icon_campus_career_150x150.png');
+}
+.cc-icon-finances {
+	background-image: url('/static/img/myb/icon_campus_finances_150x150.png');
+}
+.cc-icon-gettingaround {
+	background-image: url('/static/img/myb/icon_campus_gettingaround_150x150.png');
+}
+.cc-icon-foodhousing {
+	background-image: url('/static/img/myb/icon_campus_foodhousing_150x150.png');
+}
+.cc-icon-healthsafety {
+	background-image: url('/static/img/myb/icon_campus_healthsafety_150x150.png');
+}
+.cc-icon-newtocampus {
+	background-image: url('/static/img/myb/icon_campus_newtocampus_150x150.png');
+}
+.cc-icon-researchstudying {
+	background-image: url('/static/img/myb/icon_campus_researchstudying_150x150.png');
+}
+.cc-icon-studentgroups {
+	background-image: url('/static/img/myb/icon_campus_studentgroups_150x150.png');
+}
+.cc-icon-socialrecreation {
+	background-image: url('/static/img/myb/icon_campus_socialrecreation_150x150.png');
+}
+
+.cc-left {
+	float: left;
+}
+.cc-right {
+	float: right;
+}
+.cc-input-search {
+	background: #fff url('/static/img/myb/magnifying-glass_icon_16x16.png') 98% center no-repeat;
+	border-radius: 4px;
+	padding: 2px 20px 2px 4px;
+}
+.cc-top-20 {
+	margin-top: 20px;
+}
+
+/* Link buttons */
+.cc-link-button {
+	background: none repeat scroll 0 0 transparent;
+	border: medium none;
+	color: #2683bc;
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+.cc-link-button:disabled {
+	cursor: default !important;
+	color: #999;
+}
+.cc-link-button:focus {
+	box-shadow: none !important;
+}
+.cc-link-button:hover {
+	color: #999;
+	cursor: pointer;
+	text-decoration: none;
+}
+.cc-link-button::-moz-focus-inner {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Launcher */
+.cc-launcher {
+	padding: 0;
+	position: absolute;
+	right: -1px;
+	top: 0;
+}
+.cc-launcher, .cc-launcher .cc-launcher-dropdown {
+	background: #fff;
+	border: 1px solid #114d80;
+	border-bottom-left-radius: 6px;
+	border-top: none;
+}
+.cc-launcher a {
+	color: #15315C;
+	font-weight: bold;
+}
+.cc-launcher .cc-launcher-icons {
+	border-right: 1px solid #114d80;
+	padding: 1px 10px 3px 5px;
+}
+.cc-launcher .cc-icon {
+	margin: 2px 0 0 5px;
+}
+.cc-launcher .cc-launcher-info {
+	padding: 2px 10px;
+}
+.cc-launcher .cc-launcher-icon-dropdown {
+	font-size: 8px;
+}
+.cc-launcher .cc-launcher-dropdown {
+	display: none;
+	position: absolute;
+	right: -1px;
+	z-index: 4;
+}
+.cc-launcher .cc-launcher-dropdown a {
+	display: block;
+	padding: 4px 10px;
+	text-align: right;
+}
+
+/* Top navigation */
+.cc-topnavigation {
+	background: #012955;
+	background: -webkit-linear-gradient(top, #012955, #3b5d86);
+	background: -moz-linear-gradient(top, #012955, #3b5d86);
+	background: -o-linear-gradient(top, #012955, #3b5d86);
+	background: -ms-linear-gradient(top, #012955, #3b5d86);
+	background: linear-gradient(top, #012955, #3b5d86);
+	box-shadow: 0 2px 8px 0 #ccc;
+	margin: 0 auto;
+	width: 960px;
+}
+.cc-topnavigation .cc-topnavigation-primary {
+	height: 34px;
+}
+.cc-topnavigation > ul li {
+	list-style-type: none;
+	margin: 0 5px;
+	font-weight: bold;
+	position: relative;
+}
+.cc-topnavigation > ul a {
+	color: #fff;
+	display: block;
+	padding: 8px 10px;
+}
+.cc-topnavigation ul li a:hover, .cc-topnavigation ul li a:focus, .cc-topnavigation .cc-topnavigation-selected {
+	color: #FDD692;
+	text-decoration: none;
+}
+.cc-topnavigation .cc-topnavigation-selected::before {
+	border-bottom: 6px solid #fff;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	margin-left: -6px;
+}
+.cc-topnavigation .cc-topnavigation-selected::before, .cc-topnavigation .cc-topnavigation-selected::after {
+	bottom: 0;
+	content: "";
+	height: 0;
+	left: 50%;
+	position: absolute;
+	width: 0;
+}
+.cc-topnavigation .cc-topnavigation-selected-subnav::before {
+	border-bottom: 6px solid #1e83be;
+}
+.cc-topnavigation-subnav {
+	background: #1f83be;
+	background: -webkit-linear-gradient(top, #1f83be, #2d6dad);
+	background: -moz-linear-gradient(top, #1f83be, #2d6dad);
+	background: -o-linear-gradient(top, #1f83be, #2d6dad);
+	background: -ms-linear-gradient(top, #1f83be, #2d6dad);
+	background: linear-gradient(top, #1f83be, #2d6dad);
+	clear: both;
+	font-size: 11px;
+	height: 27px;
+	line-height: 15px;
+	margin: 0;
+	padding: 0;
+}
+.cc-topnavigation-subnav li {
+	list-style-type: none;
+	float: left;
+}
+.cc-topnavigation-subnav > li a {
+	font-weight: normal;
+	padding: 6px 2px;
+}
+
+/* Top navigation search */
+.cc-topnavigation .cc-input-search {
+	border: 1px solid #373737;
+	margin: 6px 10px 0 0;
+	width: 320px;
+}
+
+/* Top navigation dropdown */
+.cc-topnavigation a[aria-haspopup='true']:hover, .cc-topnavigation-dropdown-selected {
+	background: #ffffff;
+	border: 4px solid #032152;
+	border-bottom: none;
+	color: #032152 !important;
+	left: 4px;
+	margin-top: -8px;
+	position: relative;
+	top: 4px;
+	z-index: 3;
+}
+.cc-topnavigation .cc-topnavigation-dropdown {
+	background: #fff;
+	border: 4px solid #032152;
+	-moz-box-shadow: 6px 6px 10px -4px #333;
+	-webkit-box-shadow: 6px 6px 10px -4px #333;
+	box-shadow: 6px 6px 10px -4px #333;
+	left: 4px;
+	padding-bottom: 5px;
+	position: absolute;
+	width: 475px;
+	z-index: 2;
+}
+.cc-topnavigation .cc-topnavigation-dropdown > div {
+	float: left;
+	width: 155px;
+}
+.cc-topnavigation .cc-topnavigation-dropdown h3 {
+	color: #876734;
+	font-size: 13px;
+	margin: 10px 10px 3px;
+}
+.cc-topnavigation .cc-topnavigation-dropdown ul li {
+	margin: 0;
+}
+.cc-topnavigation .cc-topnavigation-dropdown a {
+	color: #2683BC;
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+	padding: 5px 15px;
+	text-decoration: none;
+}
+.cc-topnavigation .cc-topnavigation-dropdown a:hover, .cc-topnavigation .cc-topnavigation-dropdown a:focus {
+	background: #24517D;
+	color: #fff;
+}
+
+/* Main container */
+.cc-container-main {
+	background: #fff;
+	box-shadow: 0 2px 8px 0 #ccc;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 960px;
+}
+
+.cc-container-main h1 {
+	border-bottom: 2px solid #E4C495;
+	font-size: 15px;
+	margin: 0 0 10px 0;
+}
+
+/* Full container */
+.cc-container-main-full {
+	padding: 20px;
+}
+
+/* Left main container */
+.cc-container-main-left {
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #f7f7f7 0%, #f7f7f7 5%, #ffffff 12%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f7f7f7), color-stop(5%, #f7f7f7), color-stop(12%, #ffffff));
+	background: -webkit-linear-gradient(top, #f7f7f7 0%, #f7f7f7 5%, #ffffff 12%);
+	background: -o-linear-gradient(top, #f7f7f7 0%, #f7f7f7 5%, #ffffff 12%);
+	background: -ms-linear-gradient(top, #f7f7f7 0%, #f7f7f7 5%, #ffffff 12%);
+	background: linear-gradient(top, #f7f7f7 0%, #f7f7f7 5%, #ffffff 12%);
+	float: left;
+	margin-bottom: -99979px;
+	padding-bottom: 99999px;
+	width: 185px;
+}
+
+/* Right main container */
+.cc-container-main-right {
+	border-left: 1px solid #d6dadd;
+	border-top: 1px solid #d6dadd;
+	-moz-box-shadow: 1px -2px 7px #888;
+	-webkit-box-shadow: 1px -2px 7px #888;
+	box-shadow: 1px -2px 7px #888;
+	float: left;
+	margin-bottom: -99979px;
+	padding: 16px 20px 99999px 20px;
+	width: 775px;
+}
+
+.cc-container-main-left, .cc-container-main-right {
+	min-height: 500px;
+}
+
+/* Entity */
+.cc-entity {
+	color: #666;
+	font-size: 14px;
+	word-wrap: break-word;
+}
+
+/* Lefthandnavigation */
+.cc-lefthandnavigation {
+	margin-top: 12px;
+}
+
+.cc-lefthandnavigation a {
+	color: #707E8C;
+	display: block;
+	font-weight: bold;
+	line-height: 131%;
+	padding: 5px 24px;
+	word-wrap: break-word;
+}
+
+.cc-entity-name.cc-lefthandnavigation a, .cc-entity-name-nolink {
+	display: block;
+	padding: 8px 10px 8px 16px;
+}
+
+.cc-lefthandnavigation .cc-lefthandnavigation-item-selected {
+	color: #012955;
+	background: transparent url('/static/img/myb/right-angle-blue.png') no-repeat 95% 5px;
+}
+
+/* Widgets */
+.cc-container-widgets {
+	margin: 0 15px;
+	overflow: hidden;
+}
+.cc-container-widget {
+	float: left;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	width: 100%;
+}
+.cc-widget-main {
+	padding: 0 17px;
+}
+.cc-widget-section-label {
+	clear: both;
+	color: #232323;
+	font-size: 1.2em;
+	margin-top: 5px;
+}
+.cc-widget-section-list {
+	border-bottom: 1px dotted #cacaca;
+}
+.cc-widget-section-list:last-child {
+	border-bottom: none;
+}
+.cc-widget-title {
+	border-bottom: 1px solid #999999;
+	color: #474747;
+}
+.cc-widget-title-small {
+	margin-top: 3px;
+	font-size: 13px;
+	font-weight: normal;
+}
+.cc-widget-title h2 {
+	margin: 0;
+	padding: 2px 0;
+	font-size: 16px;
+}
+
+.cc-container-widget .cc-widget-list {
+	margin: 0;
+	max-height: 200px;
+	overflow: auto;
+	padding: 0;
+}
+.cc-container-widget .cc-widget-list li {
+	border-bottom: 1px dotted #CACACA;
+	list-style-type: none;
+}
+.cc-container-widget .cc-widget-list li:last-child {
+	border-bottom: none;
+}
+.cc-container-widget .cc-widget-list li a {
+	display: block;
+	padding: 4px 0 3px 21px;
+}
+.cc-container-widget .cc-widget-list li:last-child {
+	border-bottom: none;
+}
+.cc-container-widget .cc-widget-list-icon {
+	background-color: transparent;
+	background-position: 0 4px;
+	background-repeat: no-repeat;
+}
+.cc-container-widget .cc-widget-list-icon-big {
+	background-color: transparent;
+	background-position: 0 2px;
+	background-repeat: no-repeat;
+}
+.cc-container-widget .cc-widget-list-triangle {
+	margin: 5px 0 0 0;
+	padding: 0 0 0 16px;
+	text-indent: -15px;
+}
+.cc-container-widget .cc-widget-list-triangle li {
+	color: #2683bc;
+	list-style-type: none;
+	margin-top: 5px;
+}
+.cc-container-widget .cc-widget-list-triangle li:before {
+	/* Unicode triangles */
+	content: '\25BA \0020';
+}
+
+.cc-container-widget .cc-widget-footer {
+	background: #ececec;
+	background: -moz-linear-gradient(top, #ececec 0%, #e2e2e2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #e2e2e2));
+	background: -webkit-linear-gradient(top, #ececec 0%, #e2e2e2 100%);
+	background: -o-linear-gradient(top, #ececec 0%, #e2e2e2 100%);
+	background: -ms-linear-gradient(top, #ececec 0%, #e2e2e2 100%);
+	background: linear-gradient(top, #ececec 0%, #e2e2e2 100%);
+	border-radius: 0 0 5px 5px;
+	box-shadow: 0 1px 0 0 #bbb;
+	margin-top: 7px;
+	min-height: 14px;
+	padding: 7px 12px;
+	text-align: right;
+}
+.cc-container-widget .cc-widget-text {
+	color: #666;
+	padding: 20px;
+}
+
+/* Error pages */
+.cc-page-404 .cc-container-main img {
+	margin-right: 50px;
+}
+
+.cc-page-404 h2 {
+	margin-top: 0;
+}
+
+/* Dashboard page */
+.cc-page-dashboard .cc-page-dashboard-column-narrow, .cc-page-dashboard .cc-page-dashboard-column-wide {
+	padding-top: 15px;
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+.cc-page-dashboard .cc-page-dashboard-column-narrow {
+	width: 180px;
+}
+.cc-page-dashboard .cc-page-dashboard-column-wide {
+	border-left: 1px solid #838383;
+	margin-left: 10px;
+	padding-left: 10px;
+	width: 365px;
+}
+
+.cc-page-dashboard .cc-page-dashboard-column-shadow {
+	border-left: none;
+	box-shadow: -3px 0 4px 0 #ccc;
+}
+
+.cc-page-dashboard .cc-widget-list {
+	max-height: 184px;
+}
+.cc-page-dashboard .cc-widget-mycalendar-container {
+	min-height: 50px;
+	max-height: 186px;
+}
+.cc-page-dashboard #cc-widget-notifications {
+	margin-right: 0;
+}
+.cc-page-dashboard .cc-widget-body {
+	font-size: 0.9em;
+}
+
+/* Campus page */
+.cc-page-campus-container-left {
+	background: #f5f8fe;
+	font-size: 12px;
+	margin-bottom: -99979px;
+	padding: 10px 10px 99999px 10px;
+	width: 25%;
+}
+.cc-page-campus-container-left .cc-input-search {
+	border: 1px solid #a0b8c8;
+	width: 100%;
+}
+.cc-page-campus-container-left form {
+	border-bottom: 1px dotted #cacaca;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+}
+.cc-page-campus-container-left .cc-container-widget {
+	padding: 0 15px;
+}
+.cc-page-campus-container-left ul {
+	margin: 0;
+	padding: 0;
+}
+.cc-page-campus-container-left ul li {
+	list-style-type: none;
+	margin-top: 5px;
+}
+.cc-page-campus-container-left .cc-page-campus-icon-needhelp {
+	margin-bottom: 5px;
+}
+.cc-page-campus-container-right {
+	background: #e7eef3;
+	margin-bottom: -99979px;
+	padding-bottom: 99999px;
+	width: 75%;
+}
+.cc-page-campus-container-right .cc-page-campus-overview {
+	margin: 0;
+	padding: 15px;
+}
+.cc-page-campus-container-right .cc-page-campus-overview li {
+	list-style-type: none;
+}
+.cc-page-campus-container-right .cc-page-campus-overview li a {
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 10px;
+	float: left;
+	font-weight: bold;
+	height: 150px;
+	margin: 15px 11px 10px;
+	padding: 120px 13px 5px 13px;
+	text-align: center;
+	width: 150px;
+}
+.cc-page-campus-container-right .cc-page-campus-overview li .cc-page-campus-overview-multiline {
+	line-height: 15px;
+	padding-top: 115px;
+}
+
+/* Colleges and schools */
+.cc-page-colleges-and-schools-container ul {
+	padding: 0;
+	margin-top: 10px;
+}
+.cc-page-colleges-and-schools-container ul li {
+	list-style-type: none;
+}
+.cc-page-colleges-and-schools-container ul li a {
+	background: #194270 url('/static/img/myb/right-arrow-icon.png') 98% center no-repeat;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	float: left;
+	font-size: 12px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	padding: 10px;
+	width: 290px;
+}
+.cc-page-colleges-and-schools-container ul li:nth-child(3n+3) a {
+	margin-right: 0;
+}
+.cc-page-colleges-and-schools-title {
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 19px;
+}
+.cc-page-colleges-and-schools-container ul li .cc-page-colleges-and-schools-item-letters-and-science {
+	background-color: #3375A5;
+}
+.cc-page-colleges-and-schools-container ul li .cc-page-colleges-and-schools-item-graduate {
+	background-color: #B67325;
+}
+
+/* Finances */
+.cc-page-finances-column1, .cc-page-finances-column2, .cc-page-finances-column3 {
+	padding: 15px;
+}
+.cc-page-finances-column1 {
+	width: 25%;
+}
+.cc-page-finances-column2 {
+	width: 50%;
+}
+.cc-page-finances-column3 {
+	width: 25%;
+}
+.cc-page-finances-column3 img {
+	margin-bottom: 15px;
+}
+
+.cc-page-finances .cc-widget-financialstatus ul {
+	margin: 0;
+	padding: 0;
+}
+.cc-page-finances .cc-widget-financialstatus ul li {
+	list-style-type: none;
+}
+.cc-page-finances .cc-widget-financialstatus {
+	font-size: 12px;
+}
+.cc-page-finances .cc-widget-financialstatus h3 {
+	font-size: 12px;
+	margin: 5px 0 0 0;
+}
+.cc-page-finances .cc-financial-background-alert {
+	background: #fdeaea;
+	margin-top: 5px;
+	padding: 1px 5px 5px 5px;
+}
+.cc-page-finances .cc-financial-background-alert ul {
+	clear: both;
+}
+
+.cc-page-finances .cc-page-finances-logins li a {
+	background-color: #d3ebfc;
+	background-position: 97% center;
+	background-repeat: no-repeat;
+	color: #12618e;
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	margin: 15px 0 15px 0;
+	padding: 5px;
+	width: 100%;
+}
+
+/* Widget - My awards and bill */
+.cc-widget-awardsandbill ul {
+	background: #fff;
+	background: -webkit-linear-gradient(left, #f5f5f5, #fff);
+	background: -moz-linear-gradient(left, #f5f5f5, #fff);
+	background: -o-linear-gradient(left, #f5f5f5, #fff);
+	background: -ms-linear-gradient(left, #f5f5f5, #fff);
+	background: linear-gradient(left, #f5f5f5, #fff);
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+.cc-widget-awardsandbill ul li {
+	list-style-type: none;
+}
+.cc-widget-awardsandbill ul li a {
+	background: #fff;
+	border: 1px solid #ebebeb;
+	border-right: none;
+	float: left;
+	padding: 2px 0;
+	position: relative;
+	text-align: center;
+	width: 22%;
+}
+.cc-widget-awardsandbill ul li:last-child a {
+	border-right: 1px solid #ebebeb;
+}
+.cc-widget-awardsandbill ul li .cc-selected {
+	background: #ebebeb;
+	color: #333333;
+	font-weight: bold;
+}
+.cc-widget-awardsandbill ul li .cc-selected:before {
+	border: 8px solid #ebebeb;
+	border-color: #ebebeb transparent transparent transparent;
+	content: '';
+	display: block;
+	left: 50%;
+	margin-left: -8px;
+	position: absolute;
+	top: 100%;
+	width: 0;
+}
+.cc-widget-awardsandbill dl {
+	clear: both;
+	margin-top: 53px;
+	width: 40%;
+}
+.cc-widget-awardsandbill dt {
+	clear: both;
+	float: left;
+}
+.cc-widget-awardsandbill dd {
+	margin: 0;
+	float: right;
+}
+.cc-widget-awardsandbill .cc-widget-awardsandbill-last {
+	margin-top: 15px;
+}
+.cc-widget-awardsandbill img {
+	margin-top: 15px;
+}
+
+/* Widget - Quick statement */
+.cc-widget-quickstatement dl {
+	margin-top: 12px;
+	width: 50%;
+}
+.cc-widget-quickstatement dt {
+	clear: both;
+	float: left;
+}
+.cc-widget-quickstatement dd {
+	margin: 0;
+	float: right;
+}
+.cc-widget-quickstatement-paybill {
+	margin-top: 5px;
+	padding-left: 10px;
+	width: 50%;
+}
+.cc-widget-quickstatement-paybill a {
+	background-color: #f5f3d7;
+	background-position: 3% 18%;
+	background-repeat: no-repeat;
+	color: #c7732a;
+	display: block;
+	font-size: 17px;
+	font-weight: bold;
+	line-height: 17px;
+	padding: 5px 10px 5px 35px;
+}
+.cc-widget-quickstatement-paybill a em {
+	font-size: 12px;
+	font-weight: normal;
+}
+.cc-widget-quickstatement-paybill .cc-icon-arrow-right-brown {
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
+	height: 16px;
+	margin: 10px 3px;
+	width: 16px;
+}
+.cc-widget-scholarshipideas ul {
+	margin: 0;
+	padding: 0;
+}
+.cc-widget-scholarshipideas ul li {
+	list-style-type: none;
+	margin-top: 5px;
+}
+
+/*Tasks and Notifications shared styles */
+.cc-widget-tasks-notifications-short-title {
+	display: block;
+	font-size: 14px;
+	padding-left: 30px;
+	width: 90%;
+}
+.cc-widget-task-notifications-list-source {
+	padding-left: 30px;
+}
+.cc-widget-tasks-no-icon {
+	padding-left: 30px;
+}
+
+/* Classpage */
+.cc-page-classpage .cc-widget-main h2 {
+	margin-bottom: 0;
+}
+.cc-page-classpage .cc-widget-main h3 {
+	color: #666;
+	margin: 0 0 6px;
+}
+.cc-page-classpage-header .cc-widget-main {
+	padding-left: 0;
+}
+.cc-page-classpage-header h2 {
+	margin-top: 0;
+}
+.cc-page-classpage-courseinfo .cc-widget-main,
+.cc-page-classpage-description .cc-widget-main,
+.cc-page-classpage-instructor .cc-widget-main {
+	overflow: hidden;
+	padding: 16px 0;
+}
+
+.cc-page-classpage-description, .cc-page-classpage-courseinfo {
+	width: 362px;
+}
+
+.cc-page-classpage-courseinfo {
+	margin-right: 0;
+}
+
+.cc-page-classpage-instructor ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.cc-page-classpage-instructor .cc-page-classpage-instructor-profile {
+	float: left;
+	margin: 0 20px 20px 0;
+}
+.cc-page-classpage-instructor-item li {
+	margin-bottom: 0;
+	overflow: hidden;
+	width: 50%;
+}
+
+ul.cc-page-classpage-instructor-item li:last-child {
+	margin-bottom: 0;
+}
+
+.cc-page-classpage-instructor-name {
+	font-weight: bold;
+	padding-top: 6px;
+}
+
+.cc-page-classpage-instructor-name .cc-icon-email {
+	margin-right: 5px;
+	margin-top: 2px;
+}
+
+.cc-page-classpage-courseinfo-list,
+.cc-page-classpage-instructor-item-list {
+	margin: 0;
+	padding: 0;
+}
+
+.cc-page-classpage-courseinfo-list dt,
+.cc-page-classpage-courseinfo-list dd,
+.cc-page-classpage-instructor-item-list dt,
+.cc-page-classpage-instructor-item-list dd {
+	display: block;
+	overflow: hidden;
+	margin: 0;
+}
+
+.cc-page-classpage-courseinfo-list dt,
+.cc-page-classpage-instructor-item-list dt  {
+	color: #666;
+	font-weight: bold;
+	margin-right: 10px;
+	text-align: right;
+	width: 120px;
+}
+
+.cc-page-classpage-instructor-item-list dt {
+	width: 60px;
+}
+
+/* Webcasts */
+.cc-page-classpage-webcasts-feedheader img {
+	margin: 0 15px 15px 0;
+}
+.cc-page-classpage-webcasts-entrylist {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.cc-page-classpage-webcasts-entrylist li {
+	border-bottom: 1px dotted #cacaca;
+	padding: 15px 0;
+}
+.cc-page-classpage-webcasts-entrylist li:last-child {
+	border-bottom: none;
+}
+
+.cc-page-classpage-webcasts-entrylist .cc-page-classpage-webcasts-entrythumb img {
+	border: 2px solid #000;
+	max-width: 130px;
+}
+.cc-page-classpage-webcasts-entrylist .cc-page-classpage-webcasts-entrythumb:hover {
+	text-decoration: none;
+}
+.cc-page-classpage-webcasts-entrylist .cc-page-classpage-webcasts-entrythumb-description {
+	margin-left: 15px;
+}
+
+/* Class listings per category */
+.cc-page-classlist-container .cc-page-classlist-title {
+	font-size: 2.0em;
+}
+
+.cc-page-classlist-container dt {
+	border-top: 1px solid #E4C495;
+	font-size: 16px;
+	font-weight: bolder;
+	margin-top: 16px;
+	padding-top: 9px;
+}
+
+.cc-page-classlist-container dt:first-child {
+	border: none;
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.cc-page-classlist-container dd {
+	margin: 4px 0 0;
+}
+.cc-page-classlist-breadcrumbs {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+/* Index */
+.cc-page-index-welcome {
+	border: 1px solid #B6C6D3;
+	float: left;
+	margin-top: 20px;
+	width: 339px;
+}
+
+.cc-page-index-welcome1 {
+	margin: 20px 20px 20px 110px;
+}
+.cc-page-index-welcome1 h3 {
+	color: #fff;
+	background-color: #C68811;
+	border-bottom: 5px solid #3F8BBF;
+	font-size: 1.5em;
+	font-weight: normal;
+	margin: 0;
+	padding: 10px;
+}
+.cc-page-index-welcome1 p {
+	background: url('/static/img/myb/calcentral_homepage_collage.png') no-repeat top left scroll;
+	font-size: 1.3em;
+	height: 329px;
+	margin: 0;
+	padding: 10px;
+}
+
+.cc-page-index-welcome2 {
+	height: 412px;
+}
+.cc-page-index-welcome2 h3 {
+	border-bottom: 5px solid #3F8BBF;
+	font-size: 1.4em;
+	margin: 0;
+	padding: 10px;
+}
+.cc-page-index-welcome2 p {
+	margin: 1em 0.5em 1em 1em;
+}
+.cc-page-index-welcome2 li {
+	line-height: 1.5em;
+	list-style-image: url('/static/img/myb/speech_bubble_tiny.png');
+}
+.cc-page-index-welcome2 .cc-page-index-welcome2-herefromyou {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+.cc-page-index-welcome2 .cc-page-index-welcome2-handshake {
+	padding-left: 50px;
+	background: url('/static/img/myb/handshake.png') no-repeat top left scroll;
+}
+
+/* Classpages */
+.cc-page-classpage-sections .cc-widget-title {
+	overflow: hidden;
+}
+
+.classpages_table_label {
+	color: #999;
+	font-weight: bold;
+	padding-bottom: 3px;
+	padding-right: 7px;
+	text-align: right;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+table#classpages_section_results {
+	clear: both;
+	font-size: 0.9em;
+	width: 100%;
+}
+
+table#classpages_section_results,
+table#classpages_section_results td,
+table#classpages_section_results th {
+	border-collapse: collapse;
+	padding: 3px 5px 3px 2px;
+	vertical-align: top;
+}
+
+table#classpages_section_results th {
+	background-color: #e4e9ed;
+	color: #747577;
+	font-size: 1.1em;
+	padding-left: 5px;
+	text-align: left;
+}
+
+table.classpages_sections_table_inner {
+	margin: 0 0 0 -5px;
+}
+
+table.classpages_sections_table_inner td {
+	border: none;
+}
+
+table tr.classpages_classrow td {
+	border-top: 1px solid #D5D5D5;
+}
+
+td.classpages_sections_col1, th.classpages_sections_col1 {
+	min-width: 110px;
+	vertical-align: top;
+	width: 110px;
+}
+
+th.classpages_sections_timecol, td.classpages_sections_timecol, th.classpages_sections_loccol, td.classpages_sections_loccol {
+	width: 100px;
+}
+
+span.classpages_section_title_warrow {
+	margin-left: 15px;
+}
+
+/* Expando arrows */
+.classpages_sections_arrow, .classpages_sections_arrow_opened {
+	background: url("/static/img/myb/icons_sprite.png") no-repeat scroll -863px -21px transparent;
+}
+.classpages_sections_arrow {
+	height: 10px;
+	margin: 2px 3px 0 2px;
+	position: absolute;
+	width: 12px;
+}
+.classpages_sections_arrow_opened {
+	background-position: -882px -22px;
+}
+/* Show & hide labels based on whether the section is open or not */
+.classpages_sections_arrow span:last-child {
+	display: none;
+}
+.classpages_sections_arrow_opened span:first-child{
+	display: none;
+}
+.classpages_sections_arrow_opened span:last-child{
+	display: block;
+}
+
+#classpages_showhideall {
+	margin-right: 10px;
+	margin-top: 6px;
+}
+
+.classpages_nolink {
+	text-decoration: none;
+	color: #666666 !important;
+}
+
+/* Profile */
+.cc-widget-profile-list {
+	padding: 10px 0;
+}
+
+.cc-widget-profile-list ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.cc-widget-profile-list li {
+	margin-top: 10px;
+}
+
+.cc-widget-profile-list-item-description {
+	font-size: 10px;
+}
+
+/* Footer */
+body > footer {
+	clear: both;
+	font-size: 0.85em;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 10px 10px 15px;
+	width: 960px;
+}
+
+body > footer a {
+	float: right;
+	font-weight: bold;
+	padding-left: 21px;
+}
+
+
+/* ==|== media queries ======================================================
+	 EXAMPLE Media Query for Responsive Design.
+	 This example overrides the primary ('mobile first') styles
+	 Modify as content requires.
+	 ========================================================================== */
+
+@media only screen and (max-width: 960px) {
+	/* Style adjustments for viewports that meet the condition */
+	body > header, body > footer, .cc-container-main, .cc-topnavigation > ul {
+		width: 100%;
+	}
+	.cc-lefthandnavigation a {
+		padding-left: 10%;
+	}
+	.cc-container-main-left {
+		width: 25%;
+	}
+	.cc-container-main-right {
+		width: 75%;
+	}
+	.cc-page-colleges-and-schools-container ul li:nth-child(3n+3) a {
+		margin-right: 20px;
+	}
+	.cc-page-colleges-and-schools-container ul li a {
+		width: 100%;
+	}
+	.cc-page-index-welcome {
+		margin: 20px;
+	}
+	.cc-page-classpage-description, .cc-page-classpage-courseinfo {
+		width: 100%;
+	}
+	.cc-launcher {
+		display: none;
+	}
+	.cc-topnavigation .cc-right {
+		display: none;
+	}
+	/* Landing page */
+	.cc-page-index .cc-page-index-welcome {
+		width: 87%;
+	}
+	.cc-page-index .cc-page-index-welcome p {
+		background: none;
+		height: auto;
+	}
+	.cc-page-index .cc-page-index-welcome2 {
+		height: auto;
+		margin-top: 0;
+	}
+	/* Dashboard */
+	.cc-page-dashboard .cc-page-dashboard-column-narrow, .cc-page-dashboard .cc-page-dashboard-column-wide {
+		border: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.cc-page-dashboard .cc-page-dashboard-column-shadow {
+		box-shadow: none;
+	}
+}
+
+
+
+/* ==|== non-semantic helper classes ========================================
+	 Please define your styles before this section.
+	 ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* Contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==|== print styles =======================================================
+	 Print styles.
+	 Inlined to avoid required HTTP connection: h5bp.com/r
+	 ========================================================================== */
+
+@media print {
+	* { background: transparent !important; color: black !important; box-shadow:none !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+	a, a:visited { text-decoration: underline; }
+	a[href]:after { content: " (" attr(href) ")"; }
+	abbr[title]:after { content: " (" attr(title) ")"; }
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }	/* Don't show links for images, or javascript/internal links */
+	pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	thead { display: table-header-group; } /* h5bp.com/t */
+	tr, img { page-break-inside: avoid; }
+	img { max-width: 100% !important; }
+	@page { margin: 0.5cm; }
+	p, h2, h3 { orphans: 3; widows: 3; }
+	h2, h3 { page-break-after: avoid; }
+}

@@ -1,0 +1,9 @@
+pytz
+psycopg2
+django-profiles
+django-registration
+django-extensions
+google-api-python-client
+django-timezones
+sorl-thumbnail
+PiL

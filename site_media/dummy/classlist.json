@@ -1,0 +1,105 @@
+{
+
+    "department": "BIOPHY",
+    "dept_title": "Biophysics",
+    "college_slug": "collegeofletterssciencebiologicalsciences",
+    "college_prefix": "College of Letters & Science",
+    "college_title": "Biological Sciences",
+    "siblings": {
+        "BIOLOGY": {
+            "title": "Biology"
+        },
+        "BIOPHY": {
+            "title": "Biophysics"
+        },
+        "INTEGBI": {
+            "title": "Integrative Biology"
+        },
+        "MCELLBI": {
+            "title": "Molecular and Cell Biology"
+        },
+        "PHYS ED": {
+            "title": "Physical Education"
+        }
+    },
+
+    "classes": [
+    {
+        "cid": "2012D7303",
+        "dept": "BIO",
+        "catalog_id": "1A",
+        "title": "General Biology Lecture",
+        "description": "General introduction to cell structure and function, molecular and organismal genetics, animal development, form and function. Intended for biological sciences majors, but open to all qualified students."
+    },
+    {
+        "cid": "2012D16412",
+        "dept": "COLWRIT",
+        "catalog_id": "R1A",
+        "title": "Accelerated Reading and Composition",
+        "description": "An intensive, accelerated course satisfying concurrently the requirements of the UC Entry Level Writing Requirement and the first half of Reading and Composition. Readings will include imaginative, expository and argumentative texts representative of the range of those encountered in the undergraduate curriculum and will feature authors from diverse social and cultural backgrounds and perspectives. Instruction in writing a range of discourse forms and in the revision of papers."
+    },
+    {
+        "cid": "2012D31018",
+        "dept": "ETH STD",
+        "catalog_id": "41AC",
+        "title": "A Comparative Survey of Protest Movements Since the 60's",
+        "description": "An introductory, comparative, and interdisciplinary study of Native American, Mexican American, African American, and Asian American social and political struggles from 1960 to the present. The course traces the development of protest movements created by people of color in response to racial, class, gender, and political inequality in the context of U.S. politics and history. The course critically examines the internal and external factors contributing to the rise and fall of social and political movements and concludes with an analysis of the current conjuncture of race, ethnicity, culture, class, gender, and sexual preference in U.S. politics."
+    },
+    {
+        "cid": "2012D26127",
+        "dept": "CS",
+        "catalog_id": "10",
+        "title": "The Beauty and Joy of Computing",
+        "description": "An introduction to the beauty and joy of computing. The history, social implications, great principles, and future of computing. Beautiful applications that have changed the world. How computing empowers discovery and progress in other fields. Relevance of computing to the student and society will be emphasized. Students will learn the joy of programming a computer using a friendly, graphical language, and will complete a substantial team programming project related to their interests."
+    },
+    {
+        "cid": "2012D26190",
+        "dept": "CS",
+        "catalog_id": "61A",
+        "title": "The Structure and Interpretation of Computer Programs",
+        "description": "Introduction to programming and computer science. This course exposes students to techniques of abstraction at several levels: (a) within a programming language, using higher-order functions, manifest types, data-directed programming, and message-passing; (b) between programming languages, using functional and rule-based languages as examples. It also relates these techniques to the practical problems of implementation of languages and algorithms on a von Neumann machine. There are several significant programming projects, programmed in a dialect of the LISP language."
+    },
+    {
+        "cid": "2012D26289",
+        "dept": "CS",
+        "catalog_id": "61B",
+        "title": "Data Structures",
+        "description": "Fundamental dynamic data structures, including linear lists, queues, trees, and other linked structures; arrays strings, and hash tables. Storage management. Elementary principles of software engineering. Abstract data types. Algorithms for sorting and searching. Introduction to the Java programming language."
+    },
+    {
+        "cid": "2012D32203",
+        "dept": "FRENCH",
+        "catalog_id": "1",
+        "title": "Elementary French",
+        "description": "Introduction to speaking, listening, reading, and writing in French."
+    },
+    {
+        "cid": "2012D32656",
+        "dept": "FRENCH",
+        "catalog_id": "301",
+        "title": "Teaching French in College: First Year",
+        "description": "Bi-weekly lectures on methodology, grading and testing, demonstration class with required attendance five times per week; language laboratory observations; supervised classroom practice. Additional seminars and discussion sections on methodology. Required for all Graduate Student Instructors teaching French 1 for the first time."
+    },
+    {
+        "cid": "2012D73803",
+        "dept": "PSY",
+        "catalog_id": "1",
+        "title": "General Psychology",
+        "description": "Introduction to the principal areas, problems, and concepts of psychology. This course is required for the major; students not considering a psychology major are directed to 2."
+    },
+    {
+        "cid": "2012D74058",
+        "dept": "PSY",
+        "catalog_id": "C19",
+        "title": "Drugs and the Brain",
+        "description": "The history, chemical nature, botanical origins, and effects on the human brain and behavior of drugs such as stimulants, depressants, psychedelics, analgesics, antidepressants, antipsychotics, steroids, and other psychoactive substances of both natural and synthetic origin. The necessary biological, chemical, and psychological background material for understanding the content of this course will be contained within the course itself. Also listed as Molecular and Cell Biology C62 and Letters and Science C30T."
+    },
+    {
+        "cid": "2012D73974",
+        "dept": "PSY",
+        "catalog_id": "101",
+        "title": "Research and Data Analysis in Psychology",
+        "description": "The course will concentrate on hypothesis formulation and testing, tests of significance, analysis of variance (one-way analysis), simple correlation, simple regression, and nonparametric statistics such as chi-square and Mann-Whitney U tests. Majors intending to be in the honors program must complete 101 by the end of their junior year."
+    }
+    ]
+}

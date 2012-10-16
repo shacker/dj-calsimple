@@ -1,0 +1,81 @@
+{
+	"tasksAssignments": [
+		{
+			"id": 1,
+			"userId": 177914,
+			"title": "Rent graduation regalia",
+			"source": "Campus",
+			"completed": false,
+			"type": "task",
+			"dueDate": 1348594493,
+			"url": "http://example.com",
+			"sourceUrl": false
+		},
+		{
+			"id": 2,
+			"userId": 177914,
+			"title": "Order lab supplies",
+			"source": "BIO 1A",
+			"completed": false,
+			"type": "assignment",
+			"dueDate": 1350774668,
+			"url": "http://example.com",
+			"sourceUrl": "http://foo.com"
+		},
+		{
+			"id": 3,
+			"userId": 177914,
+			"title": "Readings",
+			"source": "ENG 24",
+			"completed": true,
+			"type": "assignment",
+			"dueDate": 1350947468,
+			"url": false,
+			"sourceUrl": "http://foo.com"
+		},
+		{
+			"id": 4,
+			"userId": 177914,
+			"title": "Metabolic observations",
+			"source": "BIO 1A",
+			"completed": true,
+			"type": "task",
+			"dueDate": 1348248729,
+			"url": "http://example.com",
+			"sourceUrl": "http://foo.com"
+		},
+		{
+			"id": 5,
+			"userId": 177914,
+			"title": "Readings",
+			"source": "ETH STD 1A",
+			"completed": false,
+			"type": "task",
+			"dueDate": 1348162330,
+			"url": "http://example.com",
+			"sourceUrl": "http://foo.com"
+		},
+		{
+			"id": 6,
+			"userId": 177914,
+			"title": "Make reservations for Mom's birthday",
+			"source": "Personal",
+			"completed": false,
+			"type": "task",
+			"dueDate": 1350840729,
+			"url": "http://recipes.com",
+			"sourceUrl": false
+		},
+		{
+			"id": 7,
+			"userId": 177914,
+			"title": "Cake ingredients for Mom's birthday",
+			"source": "Personal",
+			"completed": false,
+			"type": "task",
+			"dueDate": 1348182668,
+			"url": "http://example.com",
+			"sourceUrl": false
+		}
+	]
+}

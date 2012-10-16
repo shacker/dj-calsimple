@@ -1,0 +1,173 @@
+<html class="no-js" lang="en">
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+	More info: h5bp.com/i/378 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>CalCentral: Pilot Release</title>
+	<meta name="description" content="CalCentral is a new resource for the UC Berkeley community.">
+
+	<link rel="icon" href="{{STATIC_URL}}img/myb/favicon.png" type="image/png" />
+	<link rel="shortcut icon" href="{{STATIC_URL}}img/myb/favicon.ico" />
+
+	<!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
+
+{% block extrahead %}{% endblock extrahead %}
+
+</head>
+<body>
+
+<header>
+	<h1>Calcentral</h1>
+	<nav class="cc-launcher cc-right">
+			<div class="cc-left cc-launcher-icons">
+				<a href="http://bmail.berkeley.edu" class="ir cc-left cc-icon cc-icon-mail" title="bMail">bMail</a>
+				<a href="http://bcal.berkeley.edu" class="ir cc-left cc-icon cc-icon-calendar" title="bCal">bCal</a>
+				<a href="http://bdrive.berkeley.edu" class="ir cc-left cc-icon cc-icon-drive" title="bDrive">bDrive</a>
+			</div>
+			<a href="/secure/dashboard" class="cc-launcher-info cc-right" aria-haspopup="true">Mr. Scot Hacker, BA <span class="cc-launcher-icon-dropdown">▼<span></span></span></a>
+			<div class="cc-launcher-dropdown">
+				<ul>
+					<li>
+						<a href="/secure/preferences">Preferences</a>
+					</li>
+					<li>
+						<a href="/secure/profile">Profile</a>
+					</li>
+					<li>
+						<a href="/secure/logout">Sign out</a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+
+	<script id="cc-launcher-template" type="text/x-handlebars-template">
+	{% comment %}
+		if user is logged in ...
+	{% endcomment %}
+			<div class="cc-left cc-launcher-icons">
+				<a href="http://bmail.berkeley.edu" class="ir cc-left cc-icon cc-icon-mail" title="bMail">bMail</a>
+				<a href="http://bcal.berkeley.edu" class="ir cc-left cc-icon cc-icon-calendar" title="bCal">bCal</a>
+				<a href="http://bdrive.berkeley.edu" class="ir cc-left cc-icon cc-icon-drive" title="bDrive">bDrive</a>
+			</div>
+			<a href="/secure/dashboard" class="cc-launcher-info cc-right" aria-haspopup="true">{{preferredName}} <span class="cc-launcher-icon-dropdown">&#x25BC;<span></a>
+			<div class="cc-launcher-dropdown">
+				<ul>
+					<li>
+						<a href="/secure/preferences">Preferences</a>
+					</li>
+					<li>
+						<a href="/secure/profile">Profile</a>
+					</li>
+					<li>
+						<a href="/secure/logout">Sign out</a>
+					</li>
+				</ul>
+			</div>
+			{% comment %}
+				else was here
+			{% endcomment %}
+			<a href="#" class="cc-launcher-info cc-right">Sign in</a>
+			{% comment %}
+				end if user is logged in
+			{% endcomment %}
+	</script>
+
+</header>
+<nav class="cc-topnavigation">
+	<ul class="cc-topnavigation-primary">
+		<li class="cc-left"><a href="{% url dashboard %}" class="cc-topnavigation-selected">My Dashboard</a></li>
+		<li class="cc-left"><a href="/secure/campus">My Campus</a></li>
+		<li class="cc-left"><a href="{% url people_profile_detail user %}">My Profile</a></li>
+		<ul>
+			<li class="cc-right">
+				<input class="cc-input-search" type="text" placeholder="Search...">
+			</li>
+			<li class="cc-right">
+				<a href="/" aria-haspopup="true" class="">Discover...</a>
+				<div class="cc-topnavigation-dropdown" style="top: 30px; display: none; ">
+					<div>
+						<h3>Classes</h3>
+						<ul>
+							<li>
+								<a href="/colleges-and-schools.jsp">by Colleges &amp; Schools</a>
+							</li>
+							<li>
+								<a href="#">in My Department</a>
+							</li>
+							<li>
+								<a href="#">in My Major</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3>People</h3>
+						<ul>
+							<li>
+								<a href="#">by Colleges &amp; Schools</a>
+							</li>
+							<li>
+								<a href="#">in My Department</a>
+							</li>
+							<li>
+								<a href="#">in My Major</a>
+							</li>
+							<li>
+								<a href="#">in My Groups</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Groups</h3>
+						<ul>
+							<li>
+								<a href="#">by Colleges &amp; Schools</a>
+							</li>
+							<li>
+								<a href="#">Academic Groups</a>
+							</li>
+							<li>
+								<a href="#">Administrative Groups</a>
+							</li>
+							<li>
+								<a href="#">Campus Life Groups</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</ul>
+</nav>
+
+
+	{% block content %}
+	{% endblock content %}
+</body>
+
+<footer>
+	<div class="cc-left">Copyright &copy; 2012 The Regents of the University of California</div>
+	<a href="#">Help</a>
+	<a href="http://ets.berkeley.edu/calcentral-feedback">Feedback</a>
+</footer>
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+
+<!-- scripts concatenated and minified via build script -->
+{% comment %}
+{% endcomment %}
+	<script src="{{STATIC_URL}}js/plugins.js"></script>
+	<script src="{{STATIC_URL}}js/script.js"></script>
+
+<!-- end scripts -->

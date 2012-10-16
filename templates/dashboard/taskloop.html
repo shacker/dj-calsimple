@@ -1,0 +1,21 @@
+{# Render task LIs on dashboard or elsewhere #}
+<li class="cc-widget-list-icon-big
+	{% if t.overdue %}
+		cc-icon-big-overdue
+	{% endif %}
+	{% if t.in_progress %}
+		cc-icon-big-inprogress
+	{% endif %}
+	">
+	<a href="{{t.url}}" class="cc-widget-tasks-notifications-short-title cc-ellipsis cc-alert">{{t.title}}</a>
+
+	<div class="cc-widget-task-notifications-list-source">
+		<em>
+			{% if t.source == 'google-tasks' %}
+				{{t.get_source_display}}
+			{% else %}
+				<a href="{{t.course_url}}">{{t.course_title}}</a>
+			{% endif %}
+		</em>
+	</div>
+</li>
